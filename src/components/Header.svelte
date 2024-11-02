@@ -34,8 +34,6 @@ $effect(() => {
   <img onclick={handleMenu}  src={menu} alt="menu" class="menu"  width="40px"/>
 
   <Presentacion/>
-
-
 </header>
 
 <style>
