@@ -35,7 +35,7 @@
   
 </script>
 
-<article>
+<article id="contact">
   <figure>
     <img src={contact} alt="contact-background" width="700" />
   </figure>
@@ -72,7 +72,11 @@
   article {
     height: 100vh;
     position: relative;
-    margin-top: 120px;
+    margin-top: 300px;
+  }
+
+  h1{
+    padding-top: 20px;
   }
   figure {
     position: absolute;
@@ -117,6 +121,7 @@ textarea {
     width: 98%;
     height: 200px;
     padding: 10px;
+    color: white;
 }
 
 .enviar{

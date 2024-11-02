@@ -14,7 +14,7 @@
     ])
 </script>
 
-<section>
+<section id="projects">
     <h1>Projects</h1>
 
     <section class="project">
@@ -39,10 +39,10 @@
     section{
         height: 100vh;
         position: relative;
-        /* background: red; */
+        padding-top: 20px;
     }
     .project{
-        height: 90vh;
+        height: auto;
         background: #ffffff30;
         backdrop-filter: blur(2px);
         border: 1px solid var(--white);
@@ -54,15 +54,7 @@
         gap: 20px;
     }
 
-    .su-bg{
-        position: absolute;
-        object-fit: cover;
-        bottom: 80px;
-        left: 50%;
-        transform: translateX(-50%) rotateZ(45deg);
-        border-radius: 20px;
-        z-index: -1;
-    }
+  
     article{
         padding: 0;
         margin: 0;
@@ -75,6 +67,8 @@
         /* background: red; */
         border: 2px solid var(--white);
         overflow: hidden;
+        /* height: 200px; */
+        /* background: red; */
        
 
       & a{
@@ -116,6 +110,16 @@
         }
       }
 
+    }
+
+    .su-bg{
+        position: absolute;
+        object-fit: cover;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%) rotateZ(45deg);
+        border-radius: 20px;
+        z-index: -1;
     }
 
 </style>

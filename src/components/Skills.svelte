@@ -14,7 +14,7 @@
   console.log(js);
 </script>
 
-<article >
+<article id="skills" >
   <h1>Skills</h1>
   <article class="grid">
     <section class="first">
@@ -45,6 +45,7 @@
 
     h1 {
       padding: 10px;
+      padding-top: 20px;
       text-align: center;
       color: inherit;
     }
@@ -79,10 +80,7 @@
   }
 
  
-  .skill {
-
-    
-    
+  .skill {    
 padding: 0;
 
     height: 90%;

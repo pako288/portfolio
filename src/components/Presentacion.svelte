@@ -25,7 +25,6 @@
 
 article{
 
-
   display: grid;
   place-content: center;
   text-align: center;
@@ -51,7 +50,7 @@ article{
 
   .name{
     color: var(--primary);
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 400;
   }
 </style>

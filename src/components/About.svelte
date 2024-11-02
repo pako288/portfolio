@@ -2,7 +2,7 @@
     import about from '../assets/images/about.png';
     import dev from '../assets/images/dev.svg';
 </script>
-<article>
+<article id="about">
     <h1>About me</h1>
 
     <section class="about">

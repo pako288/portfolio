@@ -1,80 +1,123 @@
 <script>
-  import light from "../assets/images/light.png";
+  
   import Presentacion from "./Presentacion.svelte";
+import menu from '../assets/images/menu.svg';
 
-  let scroll = $state(0);
+  let showMenu = $state(false)
 
-  $effect(() => {
-    const currentScroll = () => {
-      scroll = window.scrollY;
-    };
 
-    window.addEventListener("scroll", currentScroll);
+const handleMenu = () => {
+  showMenu = !showMenu
+  
+}
 
-    return () => {
-      window.removeEventListener("scroll", currentScroll);
-    };
-  });
+$effect(() => {
+   document.addEventListener('click', e => {
+  if(!e.target.classList.contains('menu')){
+    showMenu = false
+  }
+   }) 
+    
+  
+})
+
 </script>
 
-<header>
-  <nav>
-    <a href="">Home</a>
-    <a href="">About me</a>
-    <a href="">Skills</a>
-    <a href="">Projects</a>
-    <a href="">Contact me</a>
+<header id="home">
+  <nav class=" {showMenu ? "show-menu" : "nav"}" >
+    <a href="#home" >Home</a>
+    <a href="#about">About me</a>
+    <a href="#skills" >Skills</a>  
+    <a href="#projects">Projects</a>
+    <a href="#contact" >Contact me</a>
   </nav>
+  <img onclick={handleMenu}  src={menu} alt="menu" class="menu"  width="40px"/>
 
   <Presentacion/>
 
-  <figure class={scroll > 0 ? "seelight" : "light"}>
-    <img src={light} alt="light image" width="200" />
-  </figure>
+
 </header>
 
 <style>
   header {
     height: 100dvh;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+  
     & nav {
+      /* background: rgba(255, 0, 0, 0.733); */
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 9;
         & a {
             text-decoration: none;
             color: var(--primary);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin: 0 10px;
-            transition: .4s linear;
+            transition: .5s linear;
             &:hover {
               color: var(--white);
             }
         }
     }
   }
-  .light {
-    position: absolute;
-    right: -40px;
-    bottom: 100px;
-    z-index: -1;
-    opacity: 0;
-    transition: .7s linear;
-    display: block;
-  }
-  .seelight {
-    position: absolute;
-    right: -40px;
-    bottom: 100px;
-    z-index: -1;
 
-    display: block;
-    transition: .4s linear;
-    animation: appear 1.2s linear;
+
+  .nav{
+      background: #000;
+      padding: 5px;
+      border-radius: 10px;
+      color: white;
+    
+
+    }
+
+    .menu{
+      display: none;
+    }
+
+  
+
+
+  @media (width < 420px) {
+    .menu{
+      display: inline-block;
+      /* background: red; */
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 9;
+    }
+
+    .nav{
+      background: #000000;
+      color: white;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      width: 100%;
+      justify-content: space-evenly;
+      align-items: center;
+      clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
+      transition: .6s linear;
+
+    }
+    .show-menu{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    background: #000000;
+      color: white;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      width: 100%;
+      justify-content: space-evenly;
+      align-items: center;
+      transition: .6s linear;
   }
-  @keyframes appear{
-    0% {
-      opacity: 0;
+ 
   }
-  100%{
-    opacity: .7;
-  }
-}
+
 </style>
