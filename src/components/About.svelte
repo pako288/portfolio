@@ -50,22 +50,31 @@
     .about{
         width: 90%;
         padding: 10px;
-        height: 180px;
         overflow: hidden;
         transition: .6s linear;
-        interpolate-size: allow-keywords;
         background: #ffffff40;
-        border: 1px solid var(--white);
+        /* border: 1px solid var(--white); */
         border-radius: 20px;
         backdrop-filter: blur(10px);
-        /* font-weight: 700; */
-       
+    
+    
 
-        &:hover{
-            height: max-content;
-            height: auto;
-            
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            border: 20px solid var(--primary);
+            padding: 2px;
+            z-index: 111;
+            border-radius: 20px;
+            animation: animate-border 1s linear infinite alternate;
         }
+
+
 
         & h4{
             text-wrap: balance;
@@ -81,5 +90,20 @@
         display: flex;
         justify-content: start;
         align-items: center;
+    }
+
+    @keyframes animate-border{
+        0%{
+            /* border-color: var(--primary); */
+            outline: 1px solid var(--primary);
+            opacity: 1.3;
+            filter: blur(2rem);
+
+        }
+        100%{
+            outline: 1px solid var(--primary);
+            opacity: .8;
+            filter: blur(3.5rem);
+        }
     }
 </style>
