@@ -88,8 +88,22 @@
 
     .info-about{
         display: flex;
-        justify-content: start;
+        justify-content: end;
         align-items: center;
+        /* background: red; */
+        width: 100%;
+        padding: 10px;
+
+        & h3{
+            text-align: center;
+            width: 100%;
+            text-wrap: balance;
+            /* color: var(--white); */
+        }
+
+        & figure{
+            width: 50%;
+        }
     }
 
     @keyframes animate-border{
