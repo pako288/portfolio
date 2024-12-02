@@ -1,13 +1,13 @@
 <script>
   // const images = [`html.png`, `css.png`, `js.png` , `git.png` , `boostrap.png`, `react.png`, `svelte.png`]
 
-  import js from "../assets/images/logos-tecnologias/buenos/js.png";
-  import html from "../assets/images/logos-tecnologias/buenos/html.png";
-  import css from "../assets/images/logos-tecnologias/buenos/css.png";
-  import git from "../assets/images/logos-tecnologias/buenos/git.png";
-  import react from "../assets/images/logos-tecnologias/buenos/react.png";
-  import svelte from "../assets/images/logos-tecnologias/buenos/svelte.png";
-  import boostrap from "../assets/images/logos-tecnologias/buenos/boostrap.png";
+  import js from "../assets/images/logos-tecnologias/buenos/js.webp";
+  import html from "../assets/images/logos-tecnologias/buenos/html.webp";
+  import css from "../assets/images/logos-tecnologias/buenos/css.webp";
+  import git from "../assets/images/logos-tecnologias/buenos/git.webp";
+  import react from "../assets/images/logos-tecnologias/buenos/react.webp";
+  import svelte from "../assets/images/logos-tecnologias/buenos/svelte.webp";
+  import boostrap from "../assets/images/logos-tecnologias/buenos/boostrap.webp";
 
   const imagenes = [html, css, js, git, boostrap, react, svelte];
 

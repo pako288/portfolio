@@ -1,5 +1,5 @@
 <script>
-  import foto from '../assets/images/i/original.jpg'
+  import foto from '../assets/images/i/original.webp'
 </script>
 <section class="grid fix">
   <article>
