@@ -4,9 +4,11 @@
     import clima from '../assets/images/projects/clima.png'
     import fono from '../assets/images/projects/fono.png'
     import compras from '../assets/images/projects/compras.png'
+    import raffle from '../assets/images/projects/raffle.webp'
 
 
     let projects = $state([
+        {nombre: `Raffle Project`,direccion: `https://rifa-pako-production.up.railway.app`, imagen: raffle},
         {nombre: `Cotizador de Criptomonedas`,direccion: `https://cotizador-criptomonedas-delta.vercel.app/`, imagen: cripto},
         {nombre: `Lista de Compras`,direccion: `https://listacompras-ten.vercel.app/`, imagen: compras},
         {nombre: `Landing page Fonoaudiologia`,direccion: `https://demo-fonoaudio.vercel.app/`, imagen: fono},

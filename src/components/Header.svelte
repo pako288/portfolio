@@ -4,12 +4,20 @@
 import menu from '../assets/images/menu.svg';
 
   let showMenu = $state(false)
+  let langValue = $state("en")
+
 
 
 const handleMenu = () => {
   showMenu = !showMenu
   
 }
+const handleLang = (e) => {
+  langValue = e.target.value
+  console.log(langValue)
+  
+}
+
 
 $effect(() => {
    document.addEventListener('click', e => {
@@ -30,6 +38,10 @@ $effect(() => {
     <a href="#skills" >Skills</a>  
     <a href="#projects">Projects</a>
     <a href="#contact" >Contact me</a>
+    <!-- <select name="" id="" onchange={handleLang} bind:value={langValue} >
+      <option value="en">   EN</option>
+      <option value="es">   ES</option>
+    </select> -->
   </nav>
   <img onclick={handleMenu}  src={menu} alt="menu" class="menu"  width="40px"/>
 
@@ -45,8 +57,10 @@ $effect(() => {
 
   
     & nav {
-      /* background: rgba(255, 0, 0, 0.733); */
       position: fixed;
+      width: 100%;
+      display: flex;
+      justify-content: end;
       top: 0;
       right: 0;
       z-index: 9;
@@ -65,10 +79,12 @@ $effect(() => {
 
 
   .nav{
-      background: #000;
       padding: 5px;
       border-radius: 10px;
       color: white;
+      background: #00000080;
+      margin-right: 20px;
+  
     
 
     }

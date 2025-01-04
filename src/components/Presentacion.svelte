@@ -17,6 +17,9 @@
       
       />
       <p class = "name">José Polanco </p>
+      <a href="https://drive.usercontent.google.com/u/0/uc?id=1jfKTMXvzf116wh8XMffKqVWUNLKzIQGh&export=download" download style="font-size: 20px; background: transparent; border: 2px solid var(--primary);
+      padding: 10px; cursor: pointer; color: var(--primary);
+       border-radius: 20px; text-decoration: none;">Descargar CV 📋 </a>
     </figure>
   </article>
 </section>
